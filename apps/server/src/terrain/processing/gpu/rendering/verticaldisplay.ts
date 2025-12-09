@@ -16,7 +16,7 @@ export function renderVerticalDisplay(
 
   const elevation = elevationProfile[pixelX];
   if (elevation === this.constants.invalidElevation || elevation === this.constants.unknownElevation) {
-    return [200, 127, 218, 255][colorChannel];
+    return [220, 120, 218, 255][colorChannel];
   }
 
   const stepY = (maximumAltitude - minimumAltitude) / this.constants.maxImageHeight;
@@ -34,7 +34,7 @@ export function renderVerticalDisplay(
   // elevation is water -> check if we draw the water until 0
   if (elevation === this.constants.waterElevation) {
     if (altitude <= 0) {
-      return [68, 217, 225, 255][colorChannel];
+      return [23, 233, 243, 255][colorChannel];
     }
     return [0, 0, 0, 0][colorChannel];
   }
