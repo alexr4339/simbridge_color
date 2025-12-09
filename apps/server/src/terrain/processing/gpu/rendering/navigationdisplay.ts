@@ -146,21 +146,21 @@ export function renderNormalMode(
       return drawDensityPixel(patternMapValue, 5, [194, 29, 26, 255]);
     }
     if (elevation >= warningThresholds[1]) {
-      return drawDensityPixel(patternMapValue, 5, [245, 200, 79, 255]);
+      return drawDensityPixel(patternMapValue, 5, [255, 210, 0, 255]);
     }
     if (elevation >= greenThresholds[1] && elevation < warningThresholds[0]) {
-      return drawDensityPixel(patternMapValue, 5, [100, 218, 29, 255]);
+      return drawDensityPixel(patternMapValue, 5, [91, 234, 6, 255]);
     }
     if (elevation >= warningThresholds[0] && elevation < warningThresholds[1]) {
-      return drawDensityPixel(patternMapValue, 3, [245, 200, 79, 255]);
+      return drawDensityPixel(patternMapValue, 3, [255, 210, 0, 255]);
     }
     if (elevation >= greenThresholds[0] && elevation < greenThresholds[1]) {
-      return drawDensityPixel(patternMapValue, 3, [100, 218, 29, 255]);
+      return drawDensityPixel(patternMapValue, 3, [91, 234, 6, 255]);
     }
   } else if (elevation === this.constants.waterElevation) {
-    return drawDensityPixel(patternMapValue, 7, [68, 217, 225, 255]);
+    return drawDensityPixel(patternMapValue, 7, [23, 233, 242, 255]);
   } else if (elevation === this.constants.unknownElevation) {
-    return drawDensityPixel(patternMapValue, 5, [200, 127, 218, 255]);
+    return drawDensityPixel(patternMapValue, 5, [220, 120, 218, 255]);
   }
 
   return [0, 0, 0, 255];
@@ -213,18 +213,18 @@ export function renderPeaksMode(
   ) {
     if (thresholds[2] <= elevation) {
       // solid threshold
-      return [100, 218, 29, 255];
+      return [91, 234, 6, 255];
     }
     if (thresholds[1] <= elevation) {
-      return drawDensityPixel(patternMapValue, 5, [100, 218, 29, 255]);
+      return drawDensityPixel(patternMapValue, 5, [91, 234, 6, 255]);
     }
     if (thresholds[0] <= elevation) {
-      return drawDensityPixel(patternMapValue, 3, [100, 218, 29, 255]);
+      return drawDensityPixel(patternMapValue, 3, [91, 234, 6, 255]);
     }
   } else if (elevation === this.constants.waterElevation) {
-    return drawDensityPixel(patternMapValue, 7, [68, 217, 225, 255]);
+    return drawDensityPixel(patternMapValue, 7, [23, 233, 242, 255]);
   } else if (elevation === this.constants.unknownElevation) {
-    return drawDensityPixel(patternMapValue, 5, [200, 127, 218, 255]);
+    return drawDensityPixel(patternMapValue, 5, [220, 120, 218, 218, 255]);
   }
 
   return [0, 0, 0, 255];
